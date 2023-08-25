@@ -1,0 +1,126 @@
+/* Primary stylesheet */
+
+/* Colors */
+$red: #993120;
+$green: #94B26F;
+$light_green: #B6D491;
+$yellow: #F2DC87;
+$dark_brown: #332318;
+$light_brown: #4C2516;
+$maroon: #800000;
+$black: #000000;
+$white: #FFFFFF;
+$light_blue: #ADD8E6;
+
+/* Set the colors for the CRUD tables */
+
+/* Index table */
+.crud-index {
+  background-color: $maroon;
+  padding: 20px;
+}
+
+.crud-index table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.crud-index th {
+  background-color: $green;
+  color:$maroon;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+.crud-index td {
+  background-color: $yellow;
+  color: $dark_brown;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.crud-index tr:hover {
+  background-color: $light_green;
+}
+
+.crud-index td.actions a {
+  color: $red;
+}
+
+/* New/Edit form */
+.crud-form {
+  background-color: $light_green;
+  color: $black;
+  padding: 20px;
+}
+.name {
+  color: $red;
+  font-weight: bold;
+}
+
+.crud-form label {
+  color: $maroon;
+  font-weight: bold;
+
+}
+
+.crud-form input[type="text"],
+.crud-form textarea {
+  background-color: $white  ;
+  color: $black;
+  padding: 8px;
+  border: none;
+}
+
+.crud-form input[type="submit"] {
+  background-color: $black ;
+  color: $white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+
+}
+
+/* Show page */
+.crud-show {
+  background-color: $light_green;
+  color: $dark_brown;
+  padding: 30px;
+}
+
+.crud-show label {
+  color: $dark_brown;
+  font-weight: bold;
+}
+
+.crud-show .field-value {
+  color: $dark_brown;
+}
+/* Errors */
+.field-with-errors {
+  label { color: #AA0000; }
+  input { border:  1px solid red}
+}
+
+#error-explanation {
+  width: 400px;
+  padding: 0; margin: 0 auto 1.5em;
+  border: 1px solid #AA0000;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  h2 {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px 5px 5px 15px; margin: 0;
+    width: 380px;
+    background-color: #AA0000; color: #FFFFFF;
+  }
+  p {
+    color: #333333;
+    margin: 0; padding: 3px 0.5em;
+  }
+  ul { margin-top: 0; }
+  ul li { list-style: square; }
+}

@@ -1,0 +1,34 @@
+<% @page_title="ALL COLLEGE" %>
+
+
+<div class="colleges index">
+	<div><%= link_to("BACK_TO",'access/menu') %>	</div>
+	
+	<%= link_to("ADD COLLEGE", new_college_path, :class=>"action  new") %>
+	<h2>COLLEGES</h2>
+	<table class="crud-index ">
+		<tr class="header">
+			<th>ID</th>
+			<th>COLLEGE CODE</th>
+			<th>COLLEGE NAME</th>
+            <th>COLLEGE ADDRESS</th>
+			<th>STUDENTS COUNT</th>
+			<th>ACTIONS</th>
+		</tr>
+		<% @colleges.each do  |college| %>
+		<tr class="body">
+			<td><%= college.id %></td>
+			<td id="college_code"><%= college.college_code %></td>
+			<td><%= college.college_name %></td>
+			<td><%= college.college_address %></td>
+			<td><%= college.students.size %></td>
+	<td >
+		    <%= link_to("show", college_path(college), :class=>"action show")%> 
+			<%= link_to("edit", edit_college_path(college), :class=>"action edit")%>
+		    <%= link_to("delete",delete_college_path(college) , :class=>'action delete')%>
+		</td>	
+		</tr>
+		<% end %>	
+	</table>
+
+</div>

@@ -1,0 +1,36 @@
+<% @page_title="ALL TEACHER" %>
+<div class="teachers index">
+	<div><%= link_to("BACK_TO",'access/menu') %>	</div>
+	
+<%= link_to("ADD TEACHER", new_teacher_path, :class=>"action  new") %>
+
+<div style="color:darkgreen;font-size: 20px;text-align: center;text-transform: capitalize;"><%= pluralize(@teachers.size ," teacher") %> found</div>
+	<h2>TEACHERS</h2>
+	<table class="crud-index ">
+		<tr class="header">
+			<th>ID</th>
+			<th>FIRST NAME</th>
+			<th>LAST NAME</th>
+			<th>EMAIL ID</th>
+			<th>STUDENT COUNTS</th>
+			
+		    <th>ACTIONS</th>
+		</tr>
+		<% @teachers.each do  |teacher| %>
+		<tr>
+			<td><%= teacher.id %></td>
+			<td><%= teacher.first_name %></td>
+             <td><%= teacher.last_name %></td>
+             <td><%= teacher.email_id %></td>
+            
+             <td><%=teacher.students.size %></td>	
+             
+	<td class="actions">
+			<%= link_to("edit", edit_teacher_path(teacher), :class=>"action edit" )%>
+			<%= link_to("delete", delete_teacher_path(teacher), :class=>"action delete" )%>
+		</td>
+		</tr>
+		<% end %>	
+	</table>
+
+</div>

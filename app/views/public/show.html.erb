@@ -1,0 +1,19 @@
+
+<style>
+	body{
+		background-color: #B6D491;;
+	}
+</style>
+<% @page_title= @student.student_name %>
+<h2><%="The student name is #{ @student.student_name}" %></h2>
+<% @student.books.ascending.each do |book| %>
+<div class="book">
+	<% case book.author_type%>
+	<% when 'ForeignAuthor' %>
+	<%= "This is foreign author #{book.author_name}" %>
+	<% when "LocalAuthor" %>
+	<%= "This is local author #{book.author_name}" %>
+<% end %>
+</div>
+
+<% end %>

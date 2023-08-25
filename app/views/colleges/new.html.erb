@@ -1,0 +1,13 @@
+<% @page_title="NEW COLLEGE" %>
+
+<%= link_to("BACK_TO", colleges_path, :class=>"back-link") %>
+<div>
+	<h2>CREATE NEW COLLEGE </h2>
+	<div class="crud-form"><%= form_for(@college) do |f| %>
+	<%= render(:partial=>'partial',:locals=>{:f=>f}) %>
+	<div class="form-buttons">
+		<%=f.submit("CREATE COLLEGE") %>
+	</div>
+	<% end %>
+</div>
+</div>

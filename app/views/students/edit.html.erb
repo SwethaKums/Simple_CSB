@@ -1,0 +1,12 @@
+<% @page_title="EDIT STUDENT" %>
+<%= link_to("BACK_TO", students_path, :class=>"back-link") %>
+<div>
+	<h2>UPDATE STUDENT </h2>
+<div class="crud-form">	<%= form_for(@student) do |f| %>
+	<%= render(:partial=>'partial',:locals=>{:f=>f}) %>
+	<div class="form-buttons">
+		<%=f.submit("UPDATE STUDENT") %>
+	</div>
+	<% end %>
+</div>
+</div>

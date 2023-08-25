@@ -1,0 +1,13 @@
+<% @page_title="NEW BOOK" %>
+<%= link_to("BACK_TO", books_path, :class=>"back-link") %>
+<div>
+	<h2>CREATE NEW BOOK </h2>
+	<%= form_for(@book) do |f| %>
+<div class="crud-form">	<%= render(:partial=>'partial',:locals=>{:f=>f}) %>
+	
+	<div class="form-buttons">
+		<%=f.submit("CREATE BOOK") %>
+	</div>
+	<% end %>
+</div>
+</div>

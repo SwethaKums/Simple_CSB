@@ -1,0 +1,25 @@
+<%= error_message(f.object) %>
+
+<table>
+		
+         <tr>
+			<th>STUDENT NAME</th>
+			<td><%= f.text_field(:student_name)%></td>
+		</tr>
+		
+		<tr>
+			<th>STUDENT ADDRESS</th>
+			<td><%=f.text_field(:student_address)%></td>
+		</tr>
+		<tr>
+			<th>COLLEGE ID</th>
+			<td><%= f.select(:college_id,@college.map{|c| [c.college_name,c.id]})%></td>
+		</tr>
+		<tr>
+			<th>PERMALINK</th>
+			<td><%= f.text_field(:permalink)%></td>
+		</tr>
+		
+
+	</table>
+	

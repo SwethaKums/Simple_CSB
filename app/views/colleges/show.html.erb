@@ -1,0 +1,33 @@
+<% @page_title="SHOW COLLEGE" %>
+
+<%= link_to("BACK_TO", colleges_path, :class=>"action index") %>
+<div>
+	<h2>DETAILS OF THE COLLEGE </h2>
+	<table class="crud-show ">
+		<tr>
+			<th>ID</th>
+			<td><%= @college.id %></td>
+		</tr>
+		
+		<tr>
+			<th>COLLEGE CODE</th>
+			<td><%= @college.college_code %></td>
+		</tr>
+		
+		<tr>
+			<th>COLLEGE NAME</th>
+			<td><%= @college.college_name %></td>
+		</tr>
+	
+		<tr>
+			<th>COLLEGE ADDRESS</th>
+			<td><%= @college.college_address %></td>
+		</tr>
+		<tr>
+			<th>STUDENTS COUNT	</th>
+			<td> <%= @college.students.size %></td>
+		</tr>
+		
+
+	</table>
+</div>

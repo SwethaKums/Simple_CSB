@@ -1,0 +1,37 @@
+	<% @page_title="ALL STUDENTS" %>
+<div class="students index">
+	<div><%= link_to("BACK_TO",'access/menu') %>	</div>
+<%= link_to("ADD STUDENT", new_student_path, :class=>"action  new") %>
+	<h2>STUDENTS</h2>
+	<table class="crud-index ">
+		<tr class="header">
+			<th>ID</th>
+			<th>COLLEGE ID</th>
+			<th>STUDENT NAME</th>
+            <th>STUDENT ADDRESS</th>
+			<th>PERMALINK</th>
+			<th>BOOKS COUNT</th>
+			<th>TEACHER COUNT</th>
+			<th>ACTIONS</th>
+		</tr>
+		<% @students.each do  |student| %>
+		<tr>
+			<td><%= student.id %></td>
+			<td><%= student.college_id %></td>
+             <td><%= student.student_name %></td>
+			<td><%= student.student_address %></td>
+			<td><%= student.permalink %></td>
+			<td><%= student.books.size %></td>
+			<td><%= student.teachers.size %></td>
+			
+					
+	<td class="actions">
+		    <%= link_to("show", student_path(student), :class=>"action show")%> 
+			<%= link_to("edit", edit_student_path(student), :class=>"action edit" )%>
+			<%= link_to("delete", delete_student_path(student), :class=>"action delete" )%>
+		</td>
+		</tr>
+		<% end %>	
+	</table>
+
+</div>

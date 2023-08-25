@@ -1,0 +1,37 @@
+<% @page_title="SHOW STUDENT" %>
+<%= link_to("BACK_TO", students_path, :class=>"action index") %>
+<div>
+	<h2>DETAILS OF THE STUDENTS </h2>
+	<table class="crud-show ">
+		<tr>
+			<th>ID</th>
+			<td><%= @student.id %></td>
+		</tr>
+		
+		<tr>
+			<th>COLLEGE ID</th>
+			<td><%= @student.college_id %></td>
+		</tr>
+		
+		<tr>
+			<th>STUDENT NAME</th>
+			<td><%= @student.student_name %></td>
+		</tr>
+	
+		<tr>
+			<th>STUDENT ADDRESS</th>
+			<td><%= @student.student_address %></td>
+		</tr>
+		<tr>
+			<th>PERMALINK </th>
+			<td> <%= @student.permalink %></td>
+		</tr>
+		<tr>
+			<th>BOOKS COUNT </th>
+			<td> <%= @student.books.size %></td>
+		</tr>
+		
+		
+
+	</table>
+</div>

@@ -1,0 +1,24 @@
+<% @page_title="DELETE TEACHER" %>
+
+<%= link_to("BACK_TO", teachers_path, :class=>"back-link") %>
+<div class="students details">
+	<style>
+		.teacher-name {
+        color: red;
+        font-weight: bold;
+}	
+	</style>
+	<h2>DELETE TEACHER</h2>
+	
+	<div class="crud-form"><%= form_for(@teacher, :method=>'delete') do |f| %>
+	<p>Are you sure you want to delete this student details: <span class="teacher-name"><%= f.object.first_name %></span></p>
+
+	<div class="reference-name"> </div>
+	<br/>	
+	<div class="form-button">
+		<%= f.submit("DELETE TEACHER") %>
+	</div >
+	<% end %>
+</div>
+</div>
+	

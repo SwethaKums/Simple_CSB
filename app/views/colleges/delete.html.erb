@@ -1,0 +1,22 @@
+<% @page_title="DELETE COLLEGE" %>
+
+<%= link_to("BACK_TO", colleges_path, :class=>"back-link") %>
+<div class="colleges details">
+	<style>
+		.college-name {
+        color: red;
+        font-weight: bold;
+}	
+	</style>
+	<h2>DELETE COLLEGE</h2>
+<div class="crud-form">	<%=  form_for(@college, :method=>'delete') do |f| %>
+<p>Are you sure you want to delete this college details: <span class="college-name"><%= f.object.college_name %></span></p>
+
+	<br/>
+	<div class="form-button">
+		<%= f.submit("DELETE COLLEGE") %>
+	</div >
+	<% end %>
+</div>
+</div>
+	

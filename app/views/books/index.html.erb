@@ -1,0 +1,37 @@
+<% @page_title="ALL BOOKS" %>
+<div class="books index">
+	<div><%= link_to("BACK_TO",'access/menu') %>	</div>
+	
+<%= link_to("ADD BOOK", new_book_path, :class=>"action  new") %>
+	<h2>BOOKS</h2>
+	<table class="crud-index ">
+		<tr class="header">
+			<th>ID</th>
+			<th>STUDENT ID</th>
+			<th>BOOK NAME</th>
+			<th>AUTHOR_TYPE</th>
+            <th>AUTHOR NAME</th>
+			<th>PRICE</th>
+			<th>SOLD</th>
+			<th>ACTIONS</th>
+		</tr>
+		<% @books.each do  |book| %>
+		<tr class="book-details">
+			<td><%= book.id %></td>
+			<td><%= book.student_id %></td>
+             <td><%= book.book_name %></td>
+             <td><%= book.author_type %>
+			<td><%= book.author_name %></td>
+			<td><%= book.price %></td>
+			<td class="action"><%= status_tag(book.sold) %></td>
+			
+	<td class="actions">
+		    <%= link_to("show", book_path(book), :class=>"action show")%> 
+			<%= link_to("edit", edit_book_path(book), :class=>"action edit" )%>
+			<%= link_to("delete", delete_book_path(book), :class=>"action delete" )%>
+		</td>
+		</tr>
+		<% end %>	
+	</table>
+
+</div>

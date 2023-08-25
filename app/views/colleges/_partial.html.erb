@@ -1,0 +1,20 @@
+<%= error_message(f.object) %>
+
+<table>
+		
+		<tr>
+			<th>COLLEGE CODE</th>
+			<td><%= f.text_field(:college_code)%></td>
+		</tr>
+		
+		<tr>
+			<th>COLLEGE NAME</th>
+			<td><%= f.text_field(:college_name)%></td>
+		</tr>
+	
+		<tr>
+			<th>COLLEGE ADDRESS </th>
+			<td><%=f.text_field(:college_address)%></td>
+		</tr>
+	
+	</table>

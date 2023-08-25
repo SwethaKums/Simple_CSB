@@ -1,0 +1,30 @@
+<%= error_message(f.object) %>
+<table>
+		
+		<tr>
+			<th>STUDENT ID</th>
+			<td><%=f.select(:student_id,@student.map{|s|[s.student_name,s.id]})%></td>
+		</tr>
+		<tr>
+			<th>BOOK NAME</th>
+			<td><%= f.text_field(:book_name)%></td>
+		</tr>
+		<tr>
+			<th>AUTHOR TYPE</th>
+			<td><%= f.radio_button(:author_type,'ForeignAuthor')%> ForeignAuthor
+				<%= f.radio_button(:author_type,'LocalAuthor')%> LocalAuthor
+			</td>
+		</tr>
+		<tr>
+			<th>AUTHOR NAME</th>
+			<td><%=f.text_field(:author_name)%></td>
+		</tr>
+		<tr>
+			<th>PRICE</th>
+			<td><%= f.text_field(:price)%></td>
+		</tr>
+		<tr>
+			<th>SOLD</th>
+			<td><%= f.check_box(:sold)%></td>
+		</tr>
+	</table>

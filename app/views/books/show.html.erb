@@ -1,0 +1,41 @@
+<% @page_title="SHOW BOOK" %>
+<%= link_to("BACK_TO", books_path, :class=>"action index") %>
+<div>
+	<h2>DETAILS OF THE BOOKS </h2>
+	<table class="crud-show ">
+		<tr>
+			<th>ID</th>
+			<td><%= @book.id %></td>
+		</tr>
+		
+		<tr>
+			<th>STUDENT ID</th>
+			<td><%= @book.student_id %></td>
+		</tr>
+		
+		<tr>
+			<th>BOOK NAME</th>
+			<td><%= @book.book_name %></td>
+		</tr>
+		<tr>
+			<th>AUTHOR TYPE</th>
+			<td><%= @book.author_type %></td>
+		</tr>
+	
+		<tr>
+			<th>BOOK AUTHOR</th>
+			<td><%= @book.author_name %></td>
+		</tr>
+		<tr>
+			<th>PRICE </th>
+			<td> <%= @book.price %></td>
+		</tr>
+		<tr>
+			<th>SOLD </th>
+			<td> <%= @book.sold ? "true" : "false" %></td>
+		</tr>
+		
+		
+
+	</table>
+</div>

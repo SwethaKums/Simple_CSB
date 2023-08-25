@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple csb: <%= @page_title || "Admin Area" %></title>
+    <%= stylesheet_link_tag("admin",:media=>'all') %>
+  </head>
+  
+  <body>
+    
+    
+    <div id="main">
+  <% if !flash[:notice].blank? %>
+   <div class="messgae">
+  <%=flash[:notice] %>
+</div>
+<% end %>
+ <div id="content">
+    <%= yield %>
+  </div>
+  
+</div>
+  </body>
+</html>

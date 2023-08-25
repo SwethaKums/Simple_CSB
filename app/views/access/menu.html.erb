@@ -1,0 +1,36 @@
+
+<div>
+	<style>
+		.menu{
+			text-align: center;
+			text-transform: uppercase;
+			background-color: #B6D491;
+
+		}
+		.labelling{
+			color:red;
+		}
+		.name{
+			text-align: center;
+			color: green;
+
+		}
+	</style>
+	<div>
+<div class="menu">
+	<div class="name">
+		<%= "welcome #{@teacher.first_name}!!!" %>
+	</div>
+		
+	<h2	>Teacher Menu</h>
+
+	<div class="managing">Logged in as:</div>
+		<ul class="labelling">
+			<li ><%= link_to("manage college",colleges_path) %></li>
+			<li><%= link_to("manage student",students_path )%></li>
+			<li><%= link_to("manage book",books_path )%></li>
+			<li><%= link_to("manage teacher_user",teachers_path )%></li>
+			<li><%= link_to(" logout",access_logout_path )%></li>
+		</ul>
+	
+	</div>

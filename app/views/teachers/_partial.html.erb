@@ -1,0 +1,25 @@
+<%= error_message(f.object) %>
+
+<table>
+		
+         <tr>
+			<th>FIRST NAME</th>
+			<td><%= f.text_field(:first_name)%></td>
+		</tr>
+		
+		<tr>
+			<th>LAST NAME</th>
+			<td><%=f.text_field(:last_name)%></td>
+		</tr>
+		<tr>
+			<th>EMAIL ID</th>
+			<td><%= f.text_field(:email_id)%></td>
+		</tr>
+		<tr>
+			<th>PASSWORD</th>
+			<td><%= f.text_field(:password)%></td>
+		</tr>
+		
+
+	</table>
+	

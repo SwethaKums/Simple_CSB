@@ -1,0 +1,22 @@
+<div class="login">
+	
+	<div class="crud-form"><%= form_tag(access_attempt_login_path,:method=>:post) do %>
+	<table class="label">
+		<tr>
+			<td><%= label_tag(:first_name) %></td>
+			<td><%= text_field_tag(:first_name,params[:first_name]) %></td>
+		</tr>
+
+		<tr>
+			<td><%= label_tag(:password) %></td>
+			<td><%= text_field_tag(:password) %></td>
+		</tr>
+
+		<tr>
+			<td>&nbsp;</td>
+			<td><%= submit_tag("Log In") %></td>
+		</tr>
+	</table>
+	<% end %>
+</div>	
+</div>
